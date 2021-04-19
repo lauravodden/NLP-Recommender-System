@@ -71,7 +71,7 @@ the dataset, while the ‘Authors’ column was filled with numbers.
 
 Table 1: List of variables and description for provided dataset.
 
-      ![image](https://user-images.githubusercontent.com/70361071/115191197-72b48c00-a12c-11eb-86c9-fe852af128d2.png)
+      <image src="https:<lauravodden/NLP_Recommender_System/Table1.JPG">
 
 ** There was considerable cross-contamination of variables and missing data.
 
