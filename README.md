@@ -563,7 +563,7 @@ Nadkarni, P., Ohno-Machado, L., & Chapman, W. (2011). Natural language processin
 introduction. Journal of the American Medical Informatics Association, 18(5), 544-551.
 
 Sharma, A. (2020) Beginner Tutorial: Recommender Systems in Python. Retrieved from
-https://www. datacamp.com/community/tutorials/recommender-systems-python
+https://www.datacamp.com/community/tutorials/recommender-systems-python
 
 Wolff, R. (2020) Semantic analysis: what is it and how does it work? Retrieved from
-https://monkey learn. com /blog/semantic-analysis/
+https://monkeylearn.com/blog/semantic-analysis/
