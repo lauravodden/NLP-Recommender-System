@@ -70,29 +70,7 @@ author data (while sparse) were located in an unnamed column at the far right of
 the dataset, while the ‘Authors’ column was filled with numbers.
 
 Table 1: List of variables and description for provided dataset.
-------------------------------------------------------------------
-| FIELD ID       | DESCRIPTION                                   |
-------------------------------------------------------------------
-| ID             | Univeristy ID                                 |
-| COURSENAME     | Name of course                                |
-| ITEM_COUNT     | Number of items in reading list               |
-| TITLE          | Major title                                   |
-| RESOURCE_TYPE  | Type of resource (book, journals, etc)        |
-| SUBTITLE       | Minor title                                   |
-| ISBN10S        | Universal identifiers                         |
-| ISBN13S        | Universal identifiers                         |
-| ISSNS          | Universal identifiers                         |
-| EISSNS         | Universal identifiers                         |
-| DOI            | Digital Object Identifier                     |
-| EDITION        | Edition of publication                        |
-| EDITORS        | Names of editors                              |
-| PUBLISHER      | Publisher                                     |
-| DATES          | Publication date                              |
-| VOLUME         | Volume                                        | 
-| PAGE_END       | Pages selected                                |
-| AUTHORS        | Containing numerical data**                   |
-| Unnamed        | Mostly empty, containing some author data**   |
-------------------------------------------------------------------
+![image](https://user-images.githubusercontent.com/70361071/115191197-72b48c00-a12c-11eb-86c9-fe852af128d2.png)
 ** There was considerable cross-contamination of variables and missing data.
 
 
@@ -122,16 +100,7 @@ course was generated, to be used for the analysis. Table 2 shows the remaining v
 
 
 Table 2: Variable retained for analysis (prior to enrichment).
-------------------------------------------------------------------
-| FIELD ID          |  DESCRIPTION                               | 
-------------------------------------------------------------------
-| UNI_ID            | Univeristy ID                              |
-| COURSE_NAME       | Name of course                             |
-| TITLE Major       | title                                      |
-| AUTHORS           | Authors                                    |
-| PUBLICATION_DATE  | Publication date                           |
-| RESOURCE_TYPE     | Type of resource (book, journals, etc)     |
-------------------------------------------------------------------
+![image](https://user-images.githubusercontent.com/70361071/115191257-86f88900-a12c-11eb-821e-f421595befca.png)
 
 
 4.2 Subsetting the data
@@ -175,6 +144,9 @@ subjective and this is acknowledged in the discussion and recommendation section
 report. Titles that could not be assigned a field of education were dropped from the
 dataframe. Table 3 contains a random sample (n=10) of the resource_catalog dataframe,
 with field of education included.
+
+Table 3: resource_catalog.sample(10)
+![image](https://user-images.githubusercontent.com/70361071/115191354-a7c0de80-a12c-11eb-95e1-0c3ba2eda80e.png)
 
 
 5.2 Data enrichment using Trove API
@@ -231,6 +203,10 @@ The final dataset includes the scraped data combined with the ‘UNI_ID’ and
 ‘resource_catalog’, containing 24,755 records and 6 variables, and was used for the NLP
 recommenders. Table 4 shows the first five rows of this dataset.
 
+Table 4: resource_catalog.head(5)
+![image](https://user-images.githubusercontent.com/70361071/115191470-d048d880-a12c-11eb-9b4b-b3e0281da4a6.png)
+
+
 
 5.3 NLP Recommenders
 --------------------
@@ -282,17 +258,9 @@ The first recommender system takes an existing title as input, and makes use of 
 similarity matrix to find the ten most similar titles and print the corresponding course name
 for each of these. Cosine similarity calculates the similarity between two items (A and B) and
 can be written as follows:
-      𝑠𝑖𝑚𝑖𝑙𝑎𝑟𝑖𝑡𝑦(𝐴, 𝐵) =
-      𝐴 ∙ 𝐵
-      ∥ 𝐴 ∥×∥ 𝐵 ∥
-      =
-      Σ 𝐴𝑖 × 𝐵𝑖
-      𝑛 𝑖=
-      1
-      √Σ 𝐴𝑖
-      2 × 𝑛𝑖
-      =1 √Σ 𝐵𝑖
-      2 𝑛𝑖=1
+      
+      ![image](https://user-images.githubusercontent.com/70361071/115191513-e191e500-a12c-11eb-98b1-97fed6ac165b.png)
+
 For the resource_catalog dataset, the linear_kernel() function from the sklearn package
 used the TF-IDF matrix constructed in section 5.3, which gives the cosine similarity score by
 calculating the scalar product between each vector of that matrix (Sharma, 2020).
@@ -504,11 +472,18 @@ the recommender to identify similar titles, in terms of field of education. Tabl
 the course recommendations for ‘feminist cultural studies’ belong primarily to the ‘society’
 field of education.
 
+Table 5: Cosine similarity course recommendations for 'feminist cultural studies'.
+![image](https://user-images.githubusercontent.com/70361071/115191604-038b6780-a12d-11eb-8f10-fa43e64273d1.png)
+
+
 Likewise, Table 6 shows course recommendations for ‘computer security and cryptography’
 return results belonging to the IT field of education.  Given that the supervised Naïve-Bayes 
 classifier was able to predict field of education 69.5% of the time, this is a reasonable result.
 The results of the cosine similarity recommender show that, based on the similarity of title
 text, the recommender can predict courses within a similar field of education.
+
+Table 6: Cosine similarity course recommendations for 'computer security and cryptography'.
+![image](https://user-images.githubusercontent.com/70361071/115191657-143bdd80-a12d-11eb-8ac6-623b6289cd7c.png)
 
 
 7.2 k-means clustering
@@ -520,10 +495,16 @@ relate more strongly to the ‘cultural’ aspect of the title, including Indige
 culture and including results that relate to culture as ethnicity or nationality, rather than the
 context of ‘feminist culture’.
 
+Table 7: k-means course recommendations for 'feminist cultural studies'.
+![image](https://user-images.githubusercontent.com/70361071/115191719-29187100-a12d-11eb-802c-5939926d2e78.png)
+
 The recommender performed better for ‘computer security and cryptography’. All of the top
 results relate to the field of information technology (IT), except for the top recommended
 course. The course name has been allocated to the ‘environment’ field of education , and
 this is due to the presence of the term in the course name.
+
+Table 8: k-means course recommendations for 'computer security and cryptography'.
+
 
 The results of the k-means recommender show that this clustering technique may have
 difficulty distinguishing titles, and this issue may stem from firstly the categorisation of field
@@ -552,3 +533,23 @@ analysis, as well as improving the number of fields, in order to making each fie
 education less general. For example, ‘health’ could be further broken down into categories
 such as ‘pharmacy’, ‘medicine’ and ‘nursing’. Both recommenders could be improved with
 more metadata, which may have been a viable option if a different API was used.
+
+
+9.0 References
+---------------------------------------------------------------------------------------------
+Australian Government. (2021). HEIMSHELP Field of education types. Retrieved from
+https://heims help.dese.gov.au/resources/field-of-education-types
+Chowdhury, G. (2003). Natural language processing. Annual review of information science
+and technology, 37(1), 51-89.
+Goel, V. (2018) Applying machine learning to classify an unsupervised text document.
+Retrieved from https://towardsdatascience.com/applying-machine-learning-to-classify-anunsupervised-
+text-document-e7bb6265f52
+Hirschberg, J., & Manning, C. (2015). Advances in natural language
+processing. Science, 349(6245), 261-266.
+Indurkhya, N., & Damerau, F. (2010). Handbook of natural language processing. CRC Press.
+Nadkarni, P., Ohno-Machado, L., & Chapman, W. (2011). Natural language processing: an
+introduction. Journal of the American Medical Informatics Association, 18(5), 544-551.
+Sharma, A. (2020) Beginner Tutorial: Recommender Systems in Python. Retrieved from
+https://www. datacamp.com/community/tutorials/recommender-systems-python
+Wolff, R. (2020) Semantic analysis: what is it and how does it work? Retrieved from
+https://monkey learn. com /blog/semantic-analysis/
