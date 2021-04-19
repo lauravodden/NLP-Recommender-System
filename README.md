@@ -1,4 +1,4 @@
-# NLP_Recommender_System
+# NLP Recommender System
 A recommender system for university reading material
 
 
