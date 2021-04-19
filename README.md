@@ -1,6 +1,6 @@
 # NLP Recommender System
-A recommender system for university reading material
-By Laura Vodden
+###A recommender system for university reading material
+#### By Laura Vodden
 
 
 1.0 Introduction
