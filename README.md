@@ -1,3 +1,4 @@
+
 # NLP Recommender System
 ### A recommender system for university reading material
 #### By Laura Vodden
@@ -71,7 +72,8 @@ the dataset, while the ‘Authors’ column was filled with numbers.
 
 Table 1: List of variables and description for provided dataset.
 
-      <image src="https:<lauravodden/NLP_Recommender_System/Table1.JPG">
+![Table1](https://user-images.githubusercontent.com/70361071/115315079-eb155e80-a1b9-11eb-80e1-5cd21e3c0308.JPG)
+
 
 ** There was considerable cross-contamination of variables and missing data.
 
