@@ -547,17 +547,23 @@ more metadata, which may have been a viable option if a different API was used.
 ---------------------------------------------------------------------------------------------
 Australian Government. (2021). HEIMSHELP Field of education types. Retrieved from
 https://heims help.dese.gov.au/resources/field-of-education-types
+
 Chowdhury, G. (2003). Natural language processing. Annual review of information science
 and technology, 37(1), 51-89.
+
 Goel, V. (2018) Applying machine learning to classify an unsupervised text document.
 Retrieved from https://towardsdatascience.com/applying-machine-learning-to-classify-anunsupervised-
 text-document-e7bb6265f52
+
 Hirschberg, J., & Manning, C. (2015). Advances in natural language
 processing. Science, 349(6245), 261-266.
+
 Indurkhya, N., & Damerau, F. (2010). Handbook of natural language processing. CRC Press.
 Nadkarni, P., Ohno-Machado, L., & Chapman, W. (2011). Natural language processing: an
 introduction. Journal of the American Medical Informatics Association, 18(5), 544-551.
+
 Sharma, A. (2020) Beginner Tutorial: Recommender Systems in Python. Retrieved from
 https://www. datacamp.com/community/tutorials/recommender-systems-python
+
 Wolff, R. (2020) Semantic analysis: what is it and how does it work? Retrieved from
 https://monkey learn. com /blog/semantic-analysis/
