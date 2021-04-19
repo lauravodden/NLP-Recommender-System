@@ -70,7 +70,9 @@ author data (while sparse) were located in an unnamed column at the far right of
 the dataset, while the ‘Authors’ column was filled with numbers.
 
 Table 1: List of variables and description for provided dataset.
-![image](https://user-images.githubusercontent.com/70361071/115191197-72b48c00-a12c-11eb-86c9-fe852af128d2.png)
+
+      ![image](https://user-images.githubusercontent.com/70361071/115191197-72b48c00-a12c-11eb-86c9-fe852af128d2.png)
+
 ** There was considerable cross-contamination of variables and missing data.
 
 
@@ -100,7 +102,8 @@ course was generated, to be used for the analysis. Table 2 shows the remaining v
 
 
 Table 2: Variable retained for analysis (prior to enrichment).
-![image](https://user-images.githubusercontent.com/70361071/115191257-86f88900-a12c-11eb-821e-f421595befca.png)
+
+      ![image](https://user-images.githubusercontent.com/70361071/115191257-86f88900-a12c-11eb-821e-f421595befca.png)
 
 
 4.2 Subsetting the data
@@ -146,7 +149,8 @@ dataframe. Table 3 contains a random sample (n=10) of the resource_catalog dataf
 with field of education included.
 
 Table 3: resource_catalog.sample(10)
-![image](https://user-images.githubusercontent.com/70361071/115191354-a7c0de80-a12c-11eb-95e1-0c3ba2eda80e.png)
+
+      ![image](https://user-images.githubusercontent.com/70361071/115191354-a7c0de80-a12c-11eb-95e1-0c3ba2eda80e.png)
 
 
 5.2 Data enrichment using Trove API
@@ -204,7 +208,8 @@ The final dataset includes the scraped data combined with the ‘UNI_ID’ and
 recommenders. Table 4 shows the first five rows of this dataset.
 
 Table 4: resource_catalog.head(5)
-![image](https://user-images.githubusercontent.com/70361071/115191470-d048d880-a12c-11eb-9b4b-b3e0281da4a6.png)
+   
+      ![image](https://user-images.githubusercontent.com/70361071/115191470-d048d880-a12c-11eb-9b4b-b3e0281da4a6.png)
 
 
 
@@ -473,7 +478,8 @@ the course recommendations for ‘feminist cultural studies’ belong primarily 
 field of education.
 
 Table 5: Cosine similarity course recommendations for 'feminist cultural studies'.
-![image](https://user-images.githubusercontent.com/70361071/115191604-038b6780-a12d-11eb-8f10-fa43e64273d1.png)
+
+      ![image](https://user-images.githubusercontent.com/70361071/115191604-038b6780-a12d-11eb-8f10-fa43e64273d1.png)
 
 
 Likewise, Table 6 shows course recommendations for ‘computer security and cryptography’
@@ -483,7 +489,8 @@ The results of the cosine similarity recommender show that, based on the similar
 text, the recommender can predict courses within a similar field of education.
 
 Table 6: Cosine similarity course recommendations for 'computer security and cryptography'.
-![image](https://user-images.githubusercontent.com/70361071/115191657-143bdd80-a12d-11eb-8ac6-623b6289cd7c.png)
+
+      ![image](https://user-images.githubusercontent.com/70361071/115191657-143bdd80-a12d-11eb-8ac6-623b6289cd7c.png)
 
 
 7.2 k-means clustering
@@ -496,7 +503,8 @@ culture and including results that relate to culture as ethnicity or nationality
 context of ‘feminist culture’.
 
 Table 7: k-means course recommendations for 'feminist cultural studies'.
-![image](https://user-images.githubusercontent.com/70361071/115191719-29187100-a12d-11eb-802c-5939926d2e78.png)
+
+      ![image](https://user-images.githubusercontent.com/70361071/115191719-29187100-a12d-11eb-802c-5939926d2e78.png)
 
 The recommender performed better for ‘computer security and cryptography’. All of the top
 results relate to the field of information technology (IT), except for the top recommended
