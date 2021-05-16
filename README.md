@@ -105,7 +105,7 @@ Table 1: List of variables and description for provided dataset.
 
    Table 2: Variable retained for analysis (prior to enrichment).
 
-      ![image](https://user-images.githubusercontent.com/70361071/115191257-86f88900-a12c-11eb-821e-f421595befca.png)
+   ![Table2](https://user-images.githubusercontent.com/70361071/115191257-86f88900-a12c-11eb-821e-f421595befca.png)
 
 
    4.2 Subsetting the data
@@ -152,7 +152,7 @@ Python version 3.9.2. The following packages were used:
 
    Table 3: resource_catalog.sample(10)
 
-        ![image](https://user-images.githubusercontent.com/70361071/115191354-a7c0de80-a12c-11eb-95e1-0c3ba2eda80e.png)
+   ![image](https://user-images.githubusercontent.com/70361071/115191354-a7c0de80-a12c-11eb-95e1-0c3ba2eda80e.png)
 
 
    5.2 Data enrichment using Trove API
@@ -211,7 +211,7 @@ Python version 3.9.2. The following packages were used:
 
    Table 4: resource_catalog.head(5)
 
-         ![image](https://user-images.githubusercontent.com/70361071/115191470-d048d880-a12c-11eb-9b4b-b3e0281da4a6.png)
+   ![image](https://user-images.githubusercontent.com/70361071/115191470-d048d880-a12c-11eb-9b4b-b3e0281da4a6.png)
 
 
 
@@ -266,7 +266,7 @@ Python version 3.9.2. The following packages were used:
    for each of these. Cosine similarity calculates the similarity between two items (A and B) and
    can be written as follows:
 
-         ![image](https://user-images.githubusercontent.com/70361071/115191513-e191e500-a12c-11eb-98b1-97fed6ac165b.png)
+   ![image](https://user-images.githubusercontent.com/70361071/115191513-e191e500-a12c-11eb-98b1-97fed6ac165b.png)
 
    For the resource_catalog dataset, the linear_kernel() function from the sklearn package
    used the TF-IDF matrix constructed in section 5.3, which gives the cosine similarity score by
@@ -481,7 +481,7 @@ Python version 3.9.2. The following packages were used:
 
    Table 5: Cosine similarity course recommendations for 'feminist cultural studies'.
 
-         ![image](https://user-images.githubusercontent.com/70361071/115191604-038b6780-a12d-11eb-8f10-fa43e64273d1.png)
+   ![image](https://user-images.githubusercontent.com/70361071/115191604-038b6780-a12d-11eb-8f10-fa43e64273d1.png)
 
 
    Likewise, Table 6 shows course recommendations for ‘computer security and cryptography’
@@ -492,7 +492,7 @@ Python version 3.9.2. The following packages were used:
 
    Table 6: Cosine similarity course recommendations for 'computer security and cryptography'.
 
-         ![image](https://user-images.githubusercontent.com/70361071/115191657-143bdd80-a12d-11eb-8ac6-623b6289cd7c.png)
+   ![image](https://user-images.githubusercontent.com/70361071/115191657-143bdd80-a12d-11eb-8ac6-623b6289cd7c.png)
 
 
    7.2 k-means clustering
@@ -506,7 +506,7 @@ Python version 3.9.2. The following packages were used:
 
    Table 7: k-means course recommendations for 'feminist cultural studies'.
 
-         ![image](https://user-images.githubusercontent.com/70361071/115191719-29187100-a12d-11eb-802c-5939926d2e78.png)
+   ![image](https://user-images.githubusercontent.com/70361071/115191719-29187100-a12d-11eb-802c-5939926d2e78.png)
 
    The recommender performed better for ‘computer security and cryptography’. All of the top
    results relate to the field of information technology (IT), except for the top recommended
@@ -515,6 +515,7 @@ Python version 3.9.2. The following packages were used:
 
    Table 8: k-means course recommendations for 'computer security and cryptography'.
 
+   
 
    The results of the k-means recommender show that this clustering technique may have
    difficulty distinguishing titles, and this issue may stem from firstly the categorisation of field
